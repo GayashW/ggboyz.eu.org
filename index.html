@@ -46,7 +46,8 @@
     <a href="#contact" class="block py-2 hover:text-cyan-400">Contact</a>
   </div>
 
-  <!-- Hero Section -->
+
+ <!-- Hero Section -->
   <header class="relative bg-gray-900">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-20">
       <h1 class="text-4xl sm:text-6xl font-bold text-cyan-400">Welcome to GGBoyz</h1>
@@ -79,7 +80,7 @@
     </div>
   </section>
 
- <!-- Merch Section -->
+  <!-- Merch Section -->
   <section id="merch" class="py-20 bg-gray-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="text-3xl font-bold text-cyan-400 mb-8">Shop GGBoyz Merch</h2>
@@ -119,7 +120,6 @@
     </div>
   </section>
 
-
   <!-- Footer -->
   <footer class="bg-gray-800 py-8">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -133,6 +133,23 @@
 
     toggleButton.addEventListener('click', () => {
       mobileMenu.classList.toggle('hidden');
+    });
+
+    const swiper = new Swiper('.mySwiper', {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+        },
+        1024: {
+          slidesPerView: 3,
+        },
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
     });
   </script>
 </body>
